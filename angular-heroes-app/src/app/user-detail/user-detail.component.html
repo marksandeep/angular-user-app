@@ -1,0 +1,33 @@
+<mat-card *ngIf="user">
+    <mat-card-header>
+        <div mat-card-avatar class = "tp-header-image"></div>
+        <mat-card-title>{{ user.name | uppercase }} Details</mat-card-title>
+        <mat-card-subtitle>Profile</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="container margin-left">
+            <span>id: {{user.id}}</span>
+            <span>name: {{user.name}}</span>
+            <span>email: {{user.email}}</span>
+            <span>company: {{user.company}}</span>
+            <span>location: {{user.location}}</span>
+            <span>blog: {{user.blog}}</span>
+        </div>
+        <!-- <label>name:
+        <input [(ngModel)]="user.name" placeholder="name"/>
+        </label> -->
+    </mat-card-content>
+    <mat-card-actions>
+        <button class="btn btn-primary" (click)="goBack()">go back</button>
+    </mat-card-actions>
+</mat-card>
+<!-- <div *ngIf="user">
+    <h3>{{ user.name | uppercase }} Details</h3>
+    <div><span>id: </span>{{user.id}}</div>
+    <div>
+        <label>name:
+        <input [(ngModel)]="user.name" placeholder="name"/>
+        </label>
+    </div>
+    <button (click)="goBack()">go back</button>
+</div> -->
